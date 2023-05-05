@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
+    />
+    <script src="https://kit.fontawesome.com/7dbb804037.js" crossorigin="anonymous"></script>
+    
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  </head>
+  <body>
+   
+    
+    <div class="desktop-1">
+      <img
+        class="static-network1-icon"
+        alt="no image"
+        src="E:\All Data Backup C Disk\Downloud\p4.png"
+      />
+      <div class="snapshot-rect">
+        <div class="snapshot-rect-child"></div>
+        
+        <button class="intent"><img class="intent-icon" src="E:\All Data Backup C Disk\Downloud\intent_icon.png"/>Intent</button>
+        
+        <button class="predefined"><img class="predefined-icon" src="E:\All Data Backup C Disk\Downloud\predefined_icon.png"/>Predefined</button>
+        
+        <button class="verify"><img class="verify-icon" src="E:\All Data Backup C Disk\Downloud\verify_icon.png"/>Verify</button>
+        <!--search in snapshot-->
+        <div class="wrapx">
+          <div class="searchx">
+            <img class="search-class" src="E:\All Data Backup C Disk\Downloud\blue-search-icon-23 (1).jpg"/>
+             <input type="text" class="searchTer" placeholder="Search">
+            
+              
+            </button>
+          </div>
+       </div>
+         
+       
+       <div class="main-drpdwn">
+        <button class="line-parent" autofocus>
+          <i class="fa-sharp fa-solid fa-caret-down"></i>
+        </button>
+      </div>
+        <div class="snapshot">Snapshot</div>
+        
+        <button
+          class="snap-mini-drpdwn1"
+        ><i class="fa-sharp fa-solid fa-caret-down"></i></button
+        ><button class="snap-mini-dropdown2">
+          <i class="fa-solid fa-caret-down"></i></button
+        ><button
+          class="nqe">
+          <img class="nqe-icon" alt="" src="E:\All Data Backup C Disk\Downloud\NQE_icon.png" />
+          NQE</button
+        ><button
+          class="security">
+          <img class="security-icon" src="E:\All Data Backup C Disk\Downloud\security_icon-removebg-preview.png"/> Security</button
+        ><button class="posture"><img
+          class="posture-icon"
+          alt=""
+          src="E:\All Data Backup C Disk\Downloud\posture_icon.jpg"
+        />Posture</button
+        ><button class="blast-radius"><img
+          class="blast-radius-icon"
+          alt=""
+          src="E:\All Data Backup C Disk\Downloud\blast_radius_icon-removebg-preview.png"
+        />Blast Radius</button
+        ><button class="vulnerability"><img
+          class="vulnerability-icon"
+          alt=""
+          src="E:\All Data Backup C Disk\Downloud\web-vulnerability-detection.png"
+        />Vulnerability</button
+        ><button
+          class="diffs"><img class="diff-icon" src="E:\All Data Backup C Disk\Downloud\plus-minus-image-removebg-preview.png"/>
+          Diffs</button
+        ><button class="inventory"><img
+          class="inventory-icon"
+          alt=""
+          src="E:\All Data Backup C Disk\Downloud\inventory-application.png"
+        />Inventory</button
+        ><button class="objects">
+          <p class="search-the-network"><img
+            class="objetcs-icon"
+            alt=""
+            src="E:\All Data Backup C Disk\Downloud\objects_icon-removebg-preview.png"
+          />Objects</p>
+        </button>
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+        <button class="network">Network</button
+        ><button class="dashboard"><p class="searchthe-net">
+          <img class="dash-icon" src="E:\All Data Backup C Disk\Downloud\dash_icon-removebg-preview.png"/>Dashboard</p></button
+        ><button class="sources"><img class="sources-icon"src="E:\All Data Backup C Disk\Downloud\source-icon-removebg-preview.png"/>Sources</button
+        ><button class="collection">
+          <img class="snapshot-rect-item" src="E:\All Data Backup C Disk\Downloud\Frame 124.jpg"/>Collection</button>
+        <button class="noe-library"><img class="nqe-lib-icon" src="E:\All Data Backup C Disk\Downloud\nqe-lib-icon.png"/>NQE Library</button
+        >
+        <button
+          class="settings"
+        >
+          <p class="search-the-network"><img class="icon" alt="" src="E:\All Data Backup C Disk\Downloud\setting-icon.png" />Settings</p></button>
+        <button class="forword-docs">
+          <img class="forward_icon" alt="" src="E:\All Data Backup C Disk\Downloud\forward_doc.jpg" />
+      Forword Docs</button>
+      </div>
+      <!--search(vertical) 2-->
+      <form class="nosubmit">
+        <input class="nosubmit" type="search" placeholder="Search...">
+      </form>
+      <!--search bar-->
+      <div class="wrap">
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="Search for a network object..">
+           <button type="submit" class="searchButton">
+             <i class="fa fa-search"></i>
+          </button>
+        </div>
+     </div>
+
+     <div class="down-retc"></div>
+     <script>
+      
+      var width=400,
+      height=250;
+      var links=[
+          {source:'a',target:'b'},
+          {source:'b',target:'i'},
+          {source:'c',target:'d'},
+          {source:'d',target:'e'},
+          {source:'e',target:'f'},
+          {source:'f',target:'j'},
+          {source:'g',target:'h'},
+          {source:'h',target:'a'},
+          {source:'i',target:'l'},
+          {source:'j',target:'g'},
+          {source:'k',target:'c'},
+          {source:'l',target:'k'},
+      ];
+       // create empty nodes array
+  var nodes = {}
+  
+  // compute nodes from links data
+  links.forEach(function(link) {
+      link.source = nodes[link.source] ||
+          (nodes[link.source] = {name: link.source});
+      link.target = nodes[link.target] ||
+          (nodes[link.target] = {name: link.target});        
+  });
+      // add a SVG to the body for our viz
+      var svg=d3.select('body').append('svg')
+      .attr('width', width)
+      .attr('height', height);
+
+      
+  // use the force
+  var force = d3.layout.force() //build the layout
+      .size([width, height]) //specified earlier
+      .nodes(d3.values(nodes)) //add nodes
+      .links(links) //add links
+      .on("tick", tick) //what to do
+      .linkDistance(100) //set for proper svg size
+      .start(); //kick the party off!
+
+      // add the links
+  var link = svg.selectAll('.link')
+      .data(links)
+      .enter().append('line')
+      .attr('class', 'link'); 
+
+        // add the nodes
+  var node = svg.selectAll('.node')
+      .data(force.nodes()) //add
+      .enter().append('circle')
+      .attr('class', 'node')
+      .attr('r', width * 0.01); //radius of circle
+
+      function tick(e) {
+      
+      node.attr('cx', function(d) { return d.x; })
+          .attr('cy', function(d) { return d.y; })
+          .call(force.drag);
+          
+      link.attr('x1', function(d) { return d.source.x; })
+          .attr('y1', function(d) { return d.source.y; })
+          .attr('x2', function(d) { return d.target.x; })
+          .attr('y2', function(d) { return d.target.y; });
+      
+  }
+  </script>
+
+    <script>
+      
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      
+      </script>
+     
+       
+       
+          <!-- The form(search bar) -->
+          <div class="search-1-rect-parent">
+          <div class="search-the-network-container"></div>
+<form class="example" action="action_page.php">
+  <input type="text" placeholder="Search for network.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+         
+</div>
+
+</div>
+      <button class="events-rect"><div class="events">5 Events</div></button
+      ><button class="devices-retc">
+        <div class="devices">10 Devices</div></button
+      ><button class="flow-path-rect">
+        <div class="devices">2 Flow Paths</div>
+      </button>
+      <div class="green-rect">
+        <button class="green-rect-child"></button
+        ><b class="add-policy">Add Policy </b>
+        <div class="green-rect-item"></div>
+        <div class="green-rect-inner"></div>
+      </div>
+      <label class="events1">5 EVENTS</label
+      ><label class="mismatch-5">0 mismatch | 5 falling policies</label>
+      <div class="red-rect"></div>
+      <div class="pink-rect"></div>
+      <button class="custom-policy-from">Custom Policy from Search</button>
+      <div class="circled2"><button class="button">2</button></div>
+      <!--dropdowns-->
+      <button class="mini-dropdown1">
+        <i class="fa-sharp fa-solid fa-caret-down"></i></button>
+      <button class="minid-dropdown2">
+        <i class="fa-sharp fa-solid fa-caret-down"></i></button>
+      <button class="mini-dropdown3">
+        <i class="fa-sharp fa-solid fa-caret-down"></i></button>
+        <button class="mini-dropdown4">
+          <i class="fa-sharp fa-solid fa-caret-down"></i></button>
+
+      <button class="manufacturing-to-finance">Manufacturing to finance</button
+      ><button class="loop">Loop</button>
+      <div class="circled-1"><button class="button">1</button></div>
+      <button class="multipath">Multipath</button>
+      <div class="circled-11"><button class="button">1</button></div>
+      <button class="segmentation">Segmentation</button>
+      
+
+      <div class="circled-12"><button class="button">1</button></div>
+      <div class="details"><button class="details1">Details</button></div>
+      <div class="desktop-1-child"></div>
+
+      <button class="line-container">
+        </button
+      >
+    </div>
+    
+  </body>
+</html>

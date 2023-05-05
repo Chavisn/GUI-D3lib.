@@ -1,0 +1,27 @@
+:root {
+  /* fonts */
+  --font-inter: Inter;
+
+  /* font sizes */
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-lg: 15px;
+  --font-size-xl: 16px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-firebrick: #a80808;
+  --color-pink: #fdbfbf;
+  --color-darkslategray: #04462a;
+  --color-dimgray-100: #786d6d;
+
+  /* Paddings */
+  --padding-xs: 1px;
+  --padding-sm: 8px;
+  --padding-md: 9px;
+  --padding-lg: 10px;
+
+  /* border radiuses */
+  --br-md: 10px;
+}
